@@ -1,0 +1,195 @@
+@import 'variables';
+@import 'basic';
+@import 'mixins';
+/**********************
+nav
+**********************/
+nav {
+    background: $navPlava;
+    padding: 30px 60px;
+    @include flex;
+    @media(max-width: 767px) {
+        flex-direction: column;;
+    }
+    & > a {
+        @extend .logo;
+    }
+    ul {
+        @include flex;
+        @media(max-width: 767px) {
+            flex-direction: column;
+        }
+        li {
+            margin-left: 50px;
+            @media(max-width: 767px) {
+                margin: 3px 0px;
+            }
+        }
+    }
+}
+/**********************
+footer
+**********************/
+footer {
+    background: $navPlava;
+    text-align: center;
+    padding: $padding;
+    color: $bela;
+    & > a:first-child {
+        @extend .logo;
+        font-size: 1.5rem;
+    }
+    p {
+        padding: 20px 0;
+    }
+    .icons {
+        a {
+            margin: 0 20px;
+            font-size: 1.2rem;
+        }
+    }
+}
+/**********************
+mainHeader
+**********************/
+.mainHeader {
+    background: $tamnoPlava;
+    color: $bela;
+    @include flex;
+    article {
+        flex: 0 0 50%;
+        padding: 0 60px;
+        @media(max-width: 767px) {
+            padding: 0 30px;
+            flex: 0 0 100%;
+        }
+        img {
+            width: 100%;
+            padding: 30px 0;
+        }
+        h1 {
+            font-size: 4rem;
+            @media(max-width: 767px) {
+                font-size: 2.5rem;
+            }
+            span {
+                color: $pink;
+            }
+        }
+        p {
+            padding: 20px 0;
+        }
+        button {
+            @include btn;
+        }
+    }
+}
+/**********************
+unlimited
+**********************/
+.unlimited {
+    padding: $padding;
+    @include flex;
+    article {
+        flex: 0 0 48%;
+        @media(max-width: 767px) {
+            flex: 0 0 100%;
+        }
+        button {
+            @include btn;
+        }
+    }
+}
+/**********************
+hiwHeader
+**********************/
+.hiwHeader {
+    background: $tamnoPlava;
+    color: $bela;
+    padding: $padding;
+    article {
+        @include flex;
+        div {
+            flex: 0 0 30%;
+            margin-top: 20px;
+            @media(max-width: 767px) {
+                flex: 0 0 100%;
+            }
+            i {
+                color: $pink;
+                font-size: 4rem;
+            }
+            h3 {
+                font-size: 1.7rem;
+                margin: 30px 0;
+            }
+        }
+    }
+}
+/**********************
+subscriptions
+**********************/
+.subscriptions {
+    padding: $padding;
+    background: $tamnoPlava;
+    color: $bela;
+    article {
+        @include flex;
+        div:first-child {
+            flex: 0 0 48%;
+            @media(max-width: 767px) {
+                flex: 0 0 100%;
+            }
+            h4 {
+                color: $pink;
+                font-size: 1.8rem;
+                padding: 15px 0;
+            }
+            button {
+                @include btn;
+            }
+        }
+        div:last-child {
+            flex: 0 0 48%;
+            background: rgba($bela, .1);
+            padding: 30px;
+            border-radius: 30px;
+            @media(max-width: 767px) {
+                flex: 0 0 100%;
+                margin-top: 30px;
+            }
+            ul {
+                line-height: 3;
+                text-indent: 100px;
+                @media(max-width: 767px) {
+                    text-indent: 20px;
+                }
+                li::before {
+                    font-family: "Font Awesome 5 Free"; 
+                    font-weight: 900; 
+                    content: "\f058";
+                    margin-right: 10px;
+                    color: $pink;
+                }
+                
+            }
+        }
+    }
+}
+/**********************
+concept
+**********************/
+.concept {
+    @extend .artists;
+    article:last-child {
+        div {
+            flex: 0 0 15%;
+            @media(max-width: 767px) {
+                flex: 0 0 100%;
+            }
+            img {
+                border-radius: 50%;
+            }
+        }
+    }
+}

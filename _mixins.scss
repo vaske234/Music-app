@@ -1,0 +1,25 @@
+/**********************
+mixins
+**********************/
+@mixin flex($justify: space-between, $align: center) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin btn($bg: $pink) {
+    padding: 20px 40px;
+    font-size: 1rem;
+    background: $bg;
+    color: $bela;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 40px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    transition: $transition;
+    &:hover {
+        background: $violet;
+    }
+}

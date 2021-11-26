@@ -1,0 +1,79 @@
+@import 'variables';
+@import 'mixins';
+/**********************
+basic styles
+**********************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    line-height: 1.5;
+    color: $fontColor;
+   
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: $bela;
+    transition: $transition;
+    &:hover {
+        color: $pink;
+    }
+}
+.logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    span {
+        color: $pink;
+    }
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+h2 {
+    font-size: 3rem;
+    line-height: 1.1;
+    @media(max-width: 767px) {
+        font-size: 2rem;
+    }
+}
+.artists {
+    padding: $padding;
+    article:first-child {
+        @include flex($align: flex-start);
+        h2 {
+            flex: 0 0 48%;
+            @media(max-width: 767px) {
+                flex: 0 0 100%;
+            }
+        }
+        p {
+            flex: 0 0 48%;
+            @media(max-width: 767px) {
+                flex: 0 0 100%;
+            }
+        }
+    }
+    article:last-child {
+        @include flex;
+        margin-top: 50px;
+        div {
+            flex: 0 0 20%;
+            text-align: center;
+            @media(max-width: 767px) {
+                flex: 0 0 100%;
+            }
+            img {
+                width: 100%;
+                border-radius: 40px;
+            }
+        }
+    }
+}
